@@ -15,6 +15,7 @@ class Card
 {
     public:
         Card(int number, Suit suit);
+        Card(int number);
         Suit suit();
         int number();
         static std::string suitToString(Suit s); 
