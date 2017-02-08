@@ -3,14 +3,16 @@
 
 #include <string>
 
-enum Suit {
+enum Suit
+{
     DIAMONDS,
     HEARTS,
     SPADES,
     CLUBS
 };
 
-class Card {
+class Card
+{
     public:
         Card(int number, Suit suit);
         Suit suit();
