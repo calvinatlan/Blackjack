@@ -14,6 +14,6 @@ class Deck
         int cardsLeft();
         void shuffle();
     private:
-        std::stack<Card> cardStack;
+        std::stack<Card*> cardStack;
 };
 #endif

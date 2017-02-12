@@ -13,7 +13,9 @@ Card::Card(int number, Suit suit) : _number(number), _suit(suit)
 }
 
 //Constructor passing in value between 0 - 51
-Card::Card(int val) : Card::Card((val / 4 + 1), (static_cast<Suit>(val%4))){}
+Card::Card(int val) : Card::Card((val / 4 + 1), (static_cast<Suit>(val%4))) {}
+
+Card::Card() : _number(1), _suit(static_cast<Suit>(0)) {}
 
 Suit Card::suit()
 {
@@ -22,6 +24,18 @@ Suit Card::suit()
 
 int Card::number()
 {
+    return _number;
+}
+
+int Card::val52()
+{
+    return ((_number -1 ) * 4) + _suit; 
+}
+
+int Card::value()
+{
+    if(_number > 10)
+        return 10;
     return _number;
 }
 

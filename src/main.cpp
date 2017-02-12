@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
-    Deck::Deck();
+    Deck d = Deck::Deck();
+    d.shuffle();
     return 0;
 }
